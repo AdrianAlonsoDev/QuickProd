@@ -5,22 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0741bec9-0565-4316-b8dc-51306c576c34" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/exception/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cody_history.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cody_history.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/QuickprodConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/jwt/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/jwt/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/user/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/user/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/QuickprodApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/QuickprodApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/product/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/product/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -71,34 +81,45 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.ProductControllerIntegrationTest.testGetAllProducts.executor": "Run",
     "JUnit.ProductControllerTest.executor": "Run",
     "JUnit.ProductControllerTest.listProducts.executor": "Run",
     "JUnit.ProductControllerTest.testGetProductById.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
     "RunOnceActivity.CodyHistoryLlmMigration": "true",
     "RunOnceActivity.CodyProjectSettingsMigration": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.QuickprodApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="dev.adrianalonso.dekra.quickprod.auth" />
       <recent name="dev.adrianalonso.dekra.quickprod.filter" />
       <recent name="dev.adrianalonso.dekra.quickprod.manager" />
       <recent name="dev.adrianalonso.dekra.quickprod.domain" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Adrian\Documents\DEKRA\quickprod\src\main\resources\static" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductControllerIntegrationTest.testGetAllProducts">
+  <component name="RunManager" selected="Spring Boot.QuickprodApplication">
     <configuration name="ProductControllerIntegrationTest.testGetAllProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QuickProd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.*" />
+          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.auth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,7 +135,7 @@
       <module name="QuickProd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.*" />
+          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.auth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,7 +150,7 @@
       <module name="QuickProd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.*" />
+          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.auth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,7 +166,7 @@
       <module name="QuickProd" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.*" />
+          <option name="PATTERN" value="dev.adrianalonso.dekra.quickprod.auth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -190,7 +211,7 @@
       <updated>1712346743474</updated>
       <workItem from="1712346748522" duration="17898000" />
       <workItem from="1712424849494" duration="3028000" />
-      <workItem from="1712427896356" duration="3393000" />
+      <workItem from="1712427896356" duration="11734000" />
     </task>
     <servers />
   </component>

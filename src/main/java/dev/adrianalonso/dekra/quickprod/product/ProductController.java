@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.domain;
+package dev.adrianalonso.dekra.quickprod.product;
 
 import dev.adrianalonso.dekra.quickprod.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable Long id) {
         return productRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("ProductO no encontrado con ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Producto no encontrado con ID: " + id));
     }
 
     @PostMapping
@@ -32,11 +32,11 @@ public class ProductController {
     @PutMapping("/{id}")
     public Product actualizarProducto(@PathVariable Long id, @RequestBody Product newProduct) {
         return productRepository.findById(id)
-                .map(productoExistente -> {
-                    productoExistente.setName(newProduct.getName());
-                    productoExistente.setDescription(newProduct.getDescription());
-                    productoExistente.setPrice(newProduct.getPrice());
-                    return productRepository.save(productoExistente);
+                .map(productExists -> {
+                    productExists.setName(newProduct.getName());
+                    productExists.setDescription(newProduct.getDescription());
+                    productExists.setPrice(newProduct.getPrice());
+                    return productRepository.save(productExists);
                 }).orElseThrow(() -> new ResourceNotFoundException("Producto no encontrado con ID: " + id));
     }
 

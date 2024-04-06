@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.domain;
+package dev.adrianalonso.dekra.quickprod.product;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

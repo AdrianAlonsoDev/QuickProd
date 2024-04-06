@@ -1,7 +1,7 @@
 package dev.adrianalonso.dekra.quickprod;
 
-import dev.adrianalonso.dekra.quickprod.domain.ProductController;
-import dev.adrianalonso.dekra.quickprod.domain.ProductRepository;
+import dev.adrianalonso.dekra.quickprod.product.ProductController;
+import dev.adrianalonso.dekra.quickprod.product.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.domain;
+package dev.adrianalonso.dekra.quickprod.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
