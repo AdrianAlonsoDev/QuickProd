@@ -11,6 +11,10 @@
           <accountId value="5704f0be-7ac1-470c-b006-1c00967e7909" />
           <internalId value="5edea4d8-f19c-42c0-873e-a9e45fbf17ff" />
         </chat>
+        <chat>
+          <accountId value="5704f0be-7ac1-470c-b006-1c00967e7909" />
+          <internalId value="f9cb44ee-efdb-4a99-a870-ae0de122a3c5" />
+        </chat>
       </list>
     </chats>
   </component>
