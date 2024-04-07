@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.keycloack;
+package dev.adrianalonso.dekra.quickprod;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;

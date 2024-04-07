@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.configuration;
+package dev.adrianalonso.dekra.quickprod.keycloack.auth;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.convert.converter.Converter;

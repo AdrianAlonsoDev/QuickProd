@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.configuration;
+package dev.adrianalonso.dekra.quickprod.keycloack;
 
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class KeyCloakConfig {
+public class BuilderConfig {
 
     @Value("${keycloak.adminClientId}")
     private String adminClientId;

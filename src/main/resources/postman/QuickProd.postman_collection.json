@@ -7,120 +7,184 @@
 	},
 	"item": [
 		{
-			"name": "Get Token Password",
-			"request": {
-				"auth": {
-					"type": "oauth2",
-					"oauth2": [
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						}
-					]
+			"name": "GET",
+			"item": [
+				{
+					"name": "admin-cli / users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "adrian",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "text"
-						},
-						{
-							"key": "grant_type",
-							"value": "refresh_token",
-							"type": "text"
-						},
-						{
-							"key": "client_id",
-							"value": "authenticationClientId",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:8080/realms/spring-boot-code/protocol/openid-connect/token",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"realms",
-						"spring-boot-code",
-						"protocol",
-						"openid-connect",
-						"token"
-					]
+				{
+					"name": "products",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Get Token Refresh",
-			"request": {
-				"auth": {
-					"type": "oauth2",
-					"oauth2": [
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
+			"name": "POST",
+			"item": [
+				{
+					"name": "Personal / password token",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "adrianalonsodev",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "authenticationClientId",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/spring-boot-code/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spring-boot-code",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "adrian",
-							"type": "text"
+				{
+					"name": "Personal / refresh token",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "password",
-							"value": "test",
-							"type": "text"
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_id",
+									"value": "authenticationClientId",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJjNTlhNWNlZC1jYmUwLTQ5NGItODM3YS1jNzQwZjAwMmQwMjYifQ.eyJleHAiOjE3MTI1MDUzMjAsImlhdCI6MTcxMjUwMzUyMCwianRpIjoiY2Y2YmNmOTAtOThlYS00ODc4LThhNTItMjc1MWM5YjliNmFjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcHJpbmctYm9vdC1jb2RlIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9zcHJpbmctYm9vdC1jb2RlIiwic3ViIjoiODQ3NmIxNjgtNmI2Yi00ZjBjLTliZWYtZjBmNmQ3OWFlYzEyIiwidHlwIjoiUmVmcmVzaCIsImF6cCI6ImF1dGhlbnRpY2F0aW9uQ2xpZW50SWQiLCJzZXNzaW9uX3N0YXRlIjoiYmYxMzgwYzctZWRmOS00NDBkLTgwOTMtZWM4ZWQ2M2MxNGRkIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiYmYxMzgwYzctZWRmOS00NDBkLTgwOTMtZWM4ZWQ2M2MxNGRkIn0.6PRut_Gc3hhEejg9VqvKbQp1samd3sJtVvIyfehYV2k",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "grant_type",
-							"value": "refresh_token",
-							"type": "text"
-						},
-						{
-							"key": "client_id",
-							"value": "authenticationClientId",
-							"type": "text"
+						"url": {
+							"raw": "http://localhost:8080/realms/spring-boot-code/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spring-boot-code",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8080/realms/spring-boot-keycloak/protocol/openid-connect/token",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"realms",
-						"spring-boot-keycloak",
-						"protocol",
-						"openid-connect",
-						"token"
-					]
+				{
+					"name": "admin-cli / access token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "client_secret",
+									"value": "KJaFeT0H3Vu3vZqeeCl88WyvwnQBPChg",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "admin-cli",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/realms/spring-boot-code/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"spring-boot-code",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }

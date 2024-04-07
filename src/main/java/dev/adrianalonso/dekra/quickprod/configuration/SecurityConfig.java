@@ -1,5 +1,6 @@
 package dev.adrianalonso.dekra.quickprod.configuration;
 
+import dev.adrianalonso.dekra.quickprod.keycloack.auth.JwtAuthConverter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import lombok.RequiredArgsConstructor;
@@ -10,15 +11,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 
+import static dev.adrianalonso.dekra.quickprod.util.Constants.ADMIN;
+import static dev.adrianalonso.dekra.quickprod.util.Constants.GENERAL;
+
 
 @RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-    public static final String ADMIN = "admin";
-    public static final String GENERAL = "general";
-    private final JwtAuthConverter jwtAuthConverter;
 
+    private final JwtAuthConverter jwtAuthConverter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

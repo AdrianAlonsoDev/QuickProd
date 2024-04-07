@@ -1,10 +1,10 @@
-package dev.adrianalonso.dekra.quickprod.keycloack;
+package dev.adrianalonso.dekra.quickprod.keycloack.user;
 
-import dev.adrianalonso.dekra.quickprod.auth.UserRegistrationRecord;
+import dev.adrianalonso.dekra.quickprod.keycloack.auth.UserRegistrationRecord;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.representations.idm.UserRepresentation;
 
-public interface KeycloakUserService {
+public interface UserService {
 
     UserRegistrationRecord createUser(UserRegistrationRecord userRegistrationRecord);
     UserRepresentation getUserById(String userId);

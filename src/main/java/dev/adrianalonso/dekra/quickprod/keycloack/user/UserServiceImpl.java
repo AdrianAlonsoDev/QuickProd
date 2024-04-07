@@ -1,6 +1,6 @@
-package dev.adrianalonso.dekra.quickprod.keycloack;
+package dev.adrianalonso.dekra.quickprod.keycloack.user;
 
-import dev.adrianalonso.dekra.quickprod.auth.UserRegistrationRecord;
+import dev.adrianalonso.dekra.quickprod.keycloack.auth.UserRegistrationRecord;
 import jakarta.ws.rs.core.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.keycloak.admin.client.Keycloak;
@@ -15,13 +15,13 @@ import java.util.*;
 
 @Service
 @Slf4j
-public class KeycloakUserServiceImpl implements KeycloakUserService{
+public class UserServiceImpl implements UserService {
 
     @Value("${keycloak.realm}")
     private String realm;
     private Keycloak keycloak;
 
-    public KeycloakUserServiceImpl(Keycloak keycloak) {
+    public UserServiceImpl(Keycloak keycloak) {
         this.keycloak = keycloak;
     }
 

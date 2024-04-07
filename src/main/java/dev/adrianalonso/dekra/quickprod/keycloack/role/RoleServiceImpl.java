@@ -1,5 +1,6 @@
-package dev.adrianalonso.dekra.quickprod.keycloack;
+package dev.adrianalonso.dekra.quickprod.keycloack.role;
 
+import dev.adrianalonso.dekra.quickprod.keycloack.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.RolesResource;
@@ -19,7 +20,7 @@ public class RoleServiceImpl implements  RoleService{
 
     private final Keycloak keycloak;
 
-    private final KeycloakUserService keycloakUserService;
+    private final UserService keycloakUserService;
 
     @Override
     public void assignRole(String userId, String roleName) {
