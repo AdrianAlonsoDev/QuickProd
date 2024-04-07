@@ -5,7 +5,7 @@ services:
     container_name: postgres_keycloak_database
     build:
       context: .
-      dockerfile: Dockerfile-postgres
+      dockerfile: ../Dockerfile-postgres
     restart: always
     environment:
       POSTGRES_DB: keycloak
@@ -19,8 +19,22 @@ services:
       - postgres_db_data:/var/lib/postgresql/data
 
   keycloak_web:
-    image: quay.io/keycloak/keycloak:23.0.7
     container_name: keycloak_web
+    build:
+      context: .
+      dockerfile: ../Dockerfile-keycloak
+    command:
+      - start-dev
+      - --import-realm
+    depends_on:
+      - postgres_db
+    ports:
+      - "8080:8080"
+    restart: always
+    volumes:
+      - ./realm-export/realm-export.json:/opt/keycloak/data/import/realm-export.json
+    networks:
+      - keycloak-and-postgres-network
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin@123
@@ -36,14 +50,6 @@ services:
       KC_LOG_LEVEL: info
       KC_METRICS_ENABLED: true
       KC_HEALTH_ENABLED: true
-    command: start-dev
-    restart: always
-    depends_on:
-      - postgres_db
-    ports:
-      - "8080:8080"
-    networks:
-      - keycloak-and-postgres-network
 
 networks:
   keycloak-and-postgres-network:
