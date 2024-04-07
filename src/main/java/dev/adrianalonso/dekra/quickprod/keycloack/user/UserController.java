@@ -1,5 +1,7 @@
 package dev.adrianalonso.dekra.quickprod.keycloack.user;
 
+import dev.adrianalonso.dekra.quickprod.exception.UserNotFoundException;
+import dev.adrianalonso.dekra.quickprod.exception.UserRegistrationException;
 import dev.adrianalonso.dekra.quickprod.keycloack.auth.UserRegistrationRecord;
 import lombok.AllArgsConstructor;
 import org.keycloak.representations.idm.UserRepresentation;
@@ -12,31 +14,36 @@ import java.security.Principal;
 @AllArgsConstructor
 public class UserController {
 
-    private final UserService keycloakUserService;
+    private final UserService userService;
 
     @PostMapping
     public UserRegistrationRecord createUser(@RequestBody UserRegistrationRecord userRegistrationRecord) {
-        return keycloakUserService.createUser(userRegistrationRecord);
+            return userService.createUser(userRegistrationRecord);
     }
 
     @GetMapping
     public UserRepresentation getUser(Principal principal) {
-        return keycloakUserService.getUserById(principal.getName());
+        return userService.getUserById(principal.getName());
     }
 
     @DeleteMapping("/{userId}")
     public void deleteUserById(@PathVariable String userId) {
-        keycloakUserService.deleteUserById(userId);
+        userService.deleteUserById(userId);
+    }
+
+    @DeleteMapping("/{username}")
+    public void deleteUserByUsername(@PathVariable String username) {
+        userService.deleteUserByUsername(username);
     }
 
     @PutMapping("/{userId}/send-verify-email")
     public void sendVerificationEmail(@PathVariable String userId) {
-        keycloakUserService.emailVerification(userId);
+        userService.emailVerification(userId);
     }
 
     @PutMapping("/update-password")
     public void updatePassword(Principal principal) {
-        keycloakUserService.updatePassword(principal.getName());
+        userService.updatePassword(principal.getName());
     }
 }
 

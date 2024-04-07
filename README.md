@@ -1,5 +1,6 @@
 # QUICKPROD 🚀
-QuickProd es un framework que permite maximizar la eficiencia en la gestión de productos en diferentes contextos.
+QuickProd es un framework que permite maximizar la eficiencia
+en la gestión de productos en diferentes contextos.
 
 (Desarrollado para la prueba técnica de DEKRA)
 
@@ -12,8 +13,19 @@ Para ejecutar el proyecto, sigue estos pasos:
 1. Dentro de la carpeta de Keycloak, ejecuta el siguiente comando:
     - `docker-compose up --build -d`
 
+
 2. Ahora ejecuta la aplicación Spring Boot con el siguiente comando:
     - `mvn spring-boot:run`
+
+
+3. Importa la colección de Postman `QuickProd.postman_collection.json`
+que se encuentra en la carpeta `resources/postman` para probar los endpoints.
+
+
+4. Conectate al frontend de Keycloak en la siguiente URL:
+    - `http://localhost:8080`
+    - Usuario: admin
+    - Contraseña: admin@123
 
 
 ## Docker Utils 🐳

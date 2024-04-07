@@ -17,6 +17,36 @@ public class RestExceptionHandler {
         return new RESTFailure(HttpStatus.NOT_FOUND, "Resource not found");
     }
 
+    @ExceptionHandler(UserRegistrationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public RESTFailure handleUserRegistrationException(UserRegistrationException ex) {
+        return new RESTFailure(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public RESTFailure handleUserNotFoundException(UserNotFoundException ex) {
+        return new RESTFailure(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
+    @ExceptionHandler(EmailVerificationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public RESTFailure handleEmailVerificationException(EmailVerificationException ex) {
+        return new RESTFailure(HttpStatus.BAD_REQUEST, ex.getMessage());
+    }
+
+    @ExceptionHandler(PasswordUpdateException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public RESTFailure handlePasswordUpdateException(PasswordUpdateException ex) {
+        return new RESTFailure(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+    }
+
+    @ExceptionHandler(QuickprodInternalException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public RESTFailure handleQuickprodInternalException(QuickprodInternalException ex) {
+        return new RESTFailure(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+    }
+
     @AllArgsConstructor
     @Setter
     @Getter

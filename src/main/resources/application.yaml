@@ -1,7 +1,7 @@
 server:
   port: 9095
   servlet:
-    context-path: /api/integration
+    context-path: /dekra
 
 spring:
   application:
@@ -39,14 +39,14 @@ logging:
 jwt:
   auth:
     converter:
-      resource-id: authenticationClientId
+      resource-id: quickprodAuthenticationClientId
 
 keycloak:
   realm: spring-boot-code
   domain: localhost:8080
   adminClientId: admin-cli
-  adminClientSecret: KJaFeT0H3Vu3vZqeeCl88WyvwnQBPChg
-  client: authenticationClientId
+  adminClientSecret: uk8Sw9RFBn6jBklM2J9xKkZDGfFjYpey
+  client: quickprodAuthenticationClientId
   urls:
     auth: http://${keycloak.domain}
 
