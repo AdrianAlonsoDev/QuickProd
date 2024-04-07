@@ -5,30 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0741bec9-0565-4316-b8dc-51306c576c34" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/QuickprodConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/jwt/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/jwt/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/user/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/UserRegistrationRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/JwtAuthConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/KeyCloakConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/SwaggerCustomConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/keycloack/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/keycloack/KeycloakRoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/keycloack/KeycloakUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/keycloack/KeycloakUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/keycloack/KeycloakUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/keycloack/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/keycloack/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/keycloack/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/AuthenticationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/auth/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/QuickprodConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/product/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/domain/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/product/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/adrianalonso/dekra/quickprod/ProductControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/jwt/JwtAuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/adrianalonso/dekra/quickprod/jwt/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +46,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -56,6 +60,9 @@
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -82,6 +89,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.keycloack: Compose Deployment.executor": "Run",
     "JUnit.ProductControllerIntegrationTest.testGetAllProducts.executor": "Run",
     "JUnit.ProductControllerTest.executor": "Run",
     "JUnit.ProductControllerTest.listProducts.executor": "Run",
@@ -100,7 +108,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "list.type.of.created.stylesheet": "CSS",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "Docker"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -178,22 +186,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickProdApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="QuickProd" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="dev.adrianalonso.dekra.QuickProd.QuickProdApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="QuickprodApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="QuickProd" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="dev.adrianalonso.dekra.quickprod.QuickprodApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="keycloack: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="src/main/resources/keycloack/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.keycloack: Compose Deployment" />
+      <item itemvalue="JUnit.ProductControllerIntegrationTest.testGetAllProducts" />
+      <item itemvalue="JUnit.ProductControllerTest" />
+      <item itemvalue="JUnit.ProductControllerTest.listProducts" />
+      <item itemvalue="JUnit.ProductControllerTest.testGetProductById" />
+      <item itemvalue="Spring Boot.QuickprodApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.keycloack: Compose Deployment" />
         <item itemvalue="JUnit.ProductControllerIntegrationTest.testGetAllProducts" />
         <item itemvalue="JUnit.ProductControllerTest" />
         <item itemvalue="JUnit.ProductControllerTest.testGetProductById" />
@@ -211,7 +235,8 @@
       <updated>1712346743474</updated>
       <workItem from="1712346748522" duration="17898000" />
       <workItem from="1712424849494" duration="3028000" />
-      <workItem from="1712427896356" duration="11734000" />
+      <workItem from="1712427896356" duration="12437000" />
+      <workItem from="1712441455245" duration="16585000" />
     </task>
     <servers />
   </component>
