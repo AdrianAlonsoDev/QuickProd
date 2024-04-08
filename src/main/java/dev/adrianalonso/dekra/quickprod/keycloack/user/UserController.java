@@ -1,7 +1,5 @@
 package dev.adrianalonso.dekra.quickprod.keycloack.user;
 
-import dev.adrianalonso.dekra.quickprod.exception.UserNotFoundException;
-import dev.adrianalonso.dekra.quickprod.exception.UserRegistrationException;
 import dev.adrianalonso.dekra.quickprod.keycloack.auth.UserRegistrationRecord;
 import lombok.AllArgsConstructor;
 import org.keycloak.representations.idm.UserRepresentation;

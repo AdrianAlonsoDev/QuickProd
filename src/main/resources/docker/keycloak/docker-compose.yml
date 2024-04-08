@@ -25,11 +25,14 @@ services:
       dockerfile: ../Dockerfile-keycloak
     command:
       - start-dev
+      - --import-realm
     depends_on:
       - postgres_db
     ports:
       - "8080:8080"
     restart: always
+    volumes:
+      - ./realm-export/realm-export.json:/opt/keycloak/data/import/realm-export.json
     networks:
       - keycloak-and-postgres-network
     environment:
