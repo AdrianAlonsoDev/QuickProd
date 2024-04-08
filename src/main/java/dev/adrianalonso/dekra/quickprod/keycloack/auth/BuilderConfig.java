@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.keycloack;
+package dev.adrianalonso.dekra.quickprod.keycloack.auth;
 
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
@@ -24,7 +24,6 @@ public class BuilderConfig {
 
     @Bean
     public Keycloak keycloak() {
-
 
         return KeycloakBuilder.builder()
                 .serverUrl(authServerUrl)

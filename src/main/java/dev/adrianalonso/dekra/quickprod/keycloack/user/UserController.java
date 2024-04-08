@@ -24,12 +24,12 @@ public class UserController {
         return userService.getUserById(principal.getName());
     }
 
-    @DeleteMapping("/{userId}")
+    @DeleteMapping("/id/{userId}")
     public void deleteUserById(@PathVariable String userId) {
         userService.deleteUserById(userId);
     }
 
-    @DeleteMapping("/{username}")
+    @DeleteMapping("/username/{username}")
     public void deleteUserByUsername(@PathVariable String username) {
         userService.deleteUserByUsername(username);
     }

@@ -20,12 +20,12 @@ public class RoleServiceImpl implements  RoleService{
 
     private final Keycloak keycloak;
 
-    private final UserService keycloakUserService;
+    private final UserService userService;
 
     @Override
     public void assignRole(String userId, String roleName) {
 
-        UserResource userResource = keycloakUserService.getUserResource(userId);
+        UserResource userResource = userService.getUserResource(userId);
         RolesResource rolesResource = getRolesResource();
         RoleRepresentation representation = rolesResource.get(roleName).toRepresentation();
         userResource.roles().realmLevel().add(Collections.singletonList(representation));
