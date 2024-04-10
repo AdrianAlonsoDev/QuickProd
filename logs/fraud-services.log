@@ -255,3 +255,558 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 [2024-04-10 08:59:25,081] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2024-04-11 00:17:10,379] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - Starting FraudApplication using Java 17.0.10 with PID 11820 (C:\Users\Adrian\Documents\DEKRA\quickprod\fraud-services\target\classes started by Adrian in C:\Users\Adrian\Documents\DEKRA\quickprod)
+[2024-04-11 00:17:10,381] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - No active profile set, falling back to 1 default profile: "default"
+[2024-04-11 00:17:11,361] [main] INFO  [fraud-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-11 00:17:11,514] [main] INFO  [fraud-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 145 ms. Found 1 JPA repository interfaces.
+[2024-04-11 00:17:11,735] [main] INFO  [fraud-services,,] cloud.context.scope.GenericScope - BeanFactory id=18a5acf6-9718-3f9c-9be5-ae046f65440b
+[2024-04-11 00:17:12,107] [main] INFO  [fraud-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+[2024-04-11 00:17:12,117] [main] INFO  [fraud-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-11 00:17:12,117] [main] INFO  [fraud-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2024-04-11 00:17:12,210] [main] INFO  [fraud-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-11 00:17:12,211] [main] INFO  [fraud-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1787 ms
+[2024-04-11 00:17:12,989] [main] INFO  [fraud-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-11 00:17:13,053] [main] INFO  [fraud-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2024-04-11 00:17:13,345] [main] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-11 00:17:13,767] [main] INFO  [fraud-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4037cdb0
+[2024-04-11 00:17:13,768] [main] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-11 00:17:14,106] [main] INFO  [fraud-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2024-04-11 00:17:15,479] [main] WARN  [fraud-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-11 00:17:15,480] [main] WARN  [fraud-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_fraud_customer_check" does not exist, skipping
+[2024-04-11 00:17:15,615] [main] INFO  [fraud-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2024-04-11 00:17:15,628] [main] INFO  [fraud-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-11 00:17:15,993] [main] WARN  [fraud-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-11 00:17:16,899] [main] INFO  [fraud-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-11 00:17:16,939] [main] WARN  [fraud-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-11 00:17:16,966] [main] INFO  [fraud-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-11 00:17:17,056] [main] INFO  [fraud-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-11 00:17:17,093] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-11 00:17:17,098] [main] INFO  [fraud-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-11 00:17:17,137] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-11 00:17:17,137] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-11 00:17:17,137] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-11 00:17:17,137] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-11 00:17:17,137] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-11 00:17:17,138] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-11 00:17:17,138] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-11 00:17:17,463] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-11 00:17:17,465] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-11 00:17:17,467] [main] INFO  [fraud-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-11 00:17:17,471] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712787437470 with initial instances count: 0
+[2024-04-11 00:17:17,473] [main] INFO  [fraud-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application FRAUD-SERVICES with eureka with status UP
+[2024-04-11 00:17:17,473] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712787437473, current=UP, previous=STARTING]
+[2024-04-11 00:17:17,475] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081: registering service...
+[2024-04-11 00:17:17,495] [main] INFO  [fraud-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+[2024-04-11 00:17:17,496] [main] INFO  [fraud-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8081
+[2024-04-11 00:17:17,563] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - registration status: 204
+[2024-04-11 00:17:17,572] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - Started FraudApplication in 7.685 seconds (process running for 8.654)
+[2024-04-11 00:17:17,807] [RMI TCP Connection(4)-192.168.1.135] INFO  [fraud-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-11 00:17:17,808] [RMI TCP Connection(4)-192.168.1.135] INFO  [fraud-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-11 00:17:17,809] [RMI TCP Connection(4)-192.168.1.135] INFO  [fraud-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-11 00:17:18,525] [SpringApplicationShutdownHook] INFO  [fraud-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application FRAUD-SERVICES with eureka with status DOWN
+[2024-04-11 00:17:18,525] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712787438525, current=DOWN, previous=UP]
+[2024-04-11 00:17:18,526] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081: registering service...
+[2024-04-11 00:17:18,537] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - registration status: 204
+[2024-04-11 00:17:18,556] [SpringApplicationShutdownHook] INFO  [fraud-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-11 00:17:18,556] [SpringApplicationShutdownHook] INFO  [fraud-services,,] ropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2024-04-11 00:17:18,602] [SpringApplicationShutdownHook] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-04-11 00:17:18,607] [SpringApplicationShutdownHook] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-04-11 00:17:19,623] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2024-04-11 00:17:22,630] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2024-04-11 00:17:22,654] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - deregister  status: 200
+[2024-04-11 00:17:22,657] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2024-04-11 00:17:31,229] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - Starting FraudApplication using Java 17.0.10 with PID 5260 (C:\Users\Adrian\Documents\DEKRA\quickprod\fraud-services\target\classes started by Adrian in C:\Users\Adrian\Documents\DEKRA\quickprod)
+[2024-04-11 00:17:31,230] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - No active profile set, falling back to 1 default profile: "default"
+[2024-04-11 00:17:32,175] [main] INFO  [fraud-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-11 00:17:32,302] [main] INFO  [fraud-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interfaces.
+[2024-04-11 00:17:32,495] [main] INFO  [fraud-services,,] cloud.context.scope.GenericScope - BeanFactory id=18a5acf6-9718-3f9c-9be5-ae046f65440b
+[2024-04-11 00:17:32,781] [main] INFO  [fraud-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+[2024-04-11 00:17:32,789] [main] INFO  [fraud-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-11 00:17:32,789] [main] INFO  [fraud-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2024-04-11 00:17:32,864] [main] INFO  [fraud-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-11 00:17:32,864] [main] INFO  [fraud-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1583 ms
+[2024-04-11 00:17:33,300] [main] INFO  [fraud-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-11 00:17:33,338] [main] INFO  [fraud-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2024-04-11 00:17:33,573] [main] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-11 00:17:33,701] [main] INFO  [fraud-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4037cdb0
+[2024-04-11 00:17:33,703] [main] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-11 00:17:33,728] [main] INFO  [fraud-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2024-04-11 00:17:34,403] [main] WARN  [fraud-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-11 00:17:34,403] [main] WARN  [fraud-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_fraud_customer_check" does not exist, skipping
+[2024-04-11 00:17:34,466] [main] INFO  [fraud-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2024-04-11 00:17:34,478] [main] INFO  [fraud-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-11 00:17:34,845] [main] WARN  [fraud-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-11 00:17:35,418] [main] INFO  [fraud-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-11 00:17:35,449] [main] WARN  [fraud-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-11 00:17:35,467] [main] INFO  [fraud-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-11 00:17:35,529] [main] INFO  [fraud-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-11 00:17:35,555] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-11 00:17:35,558] [main] INFO  [fraud-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-11 00:17:35,580] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-11 00:17:35,580] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-11 00:17:35,580] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-11 00:17:35,580] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-11 00:17:35,580] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-11 00:17:35,580] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-11 00:17:35,580] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-11 00:17:35,734] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-11 00:17:35,736] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-11 00:17:35,737] [main] INFO  [fraud-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-11 00:17:35,740] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712787455740 with initial instances count: 1
+[2024-04-11 00:17:35,742] [main] INFO  [fraud-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application FRAUD-SERVICES with eureka with status UP
+[2024-04-11 00:17:35,742] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712787455742, current=UP, previous=STARTING]
+[2024-04-11 00:17:35,744] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081: registering service...
+[2024-04-11 00:17:35,760] [main] INFO  [fraud-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+[2024-04-11 00:17:35,760] [main] INFO  [fraud-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8081
+[2024-04-11 00:17:35,773] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - registration status: 204
+[2024-04-11 00:17:35,830] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - Started FraudApplication in 5.176 seconds (process running for 5.818)
+[2024-04-11 00:17:36,358] [RMI TCP Connection(2)-192.168.1.135] INFO  [fraud-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-11 00:17:36,358] [RMI TCP Connection(2)-192.168.1.135] INFO  [fraud-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-11 00:17:36,359] [RMI TCP Connection(2)-192.168.1.135] INFO  [fraud-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-11 00:19:10,490] [http-nio-8081-exec-1] INFO  [fraud-services,6617105d60b85c2c0aa0fd9164803622,ae9ceb96ec412a11] d.q.f.controller.FraudController - fraud check request for customer false
+[2024-04-11 00:19:27,006] [http-nio-8081-exec-4] INFO  [fraud-services,6617106eab7785ab666fe830bbda54ae,4958cbb6d04021dc] d.q.f.controller.FraudController - fraud check request for customer true
+[2024-04-11 00:19:39,249] [SpringApplicationShutdownHook] INFO  [fraud-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application FRAUD-SERVICES with eureka with status DOWN
+[2024-04-11 00:19:39,250] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712787579250, current=DOWN, previous=UP]
+[2024-04-11 00:19:39,250] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081: registering service...
+[2024-04-11 00:19:39,289] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - registration status: 204
+[2024-04-11 00:19:39,299] [SpringApplicationShutdownHook] INFO  [fraud-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-11 00:19:39,303] [SpringApplicationShutdownHook] INFO  [fraud-services,,] ropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2024-04-11 00:19:39,345] [SpringApplicationShutdownHook] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-04-11 00:19:39,356] [SpringApplicationShutdownHook] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-04-11 00:19:39,849] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2024-04-11 00:19:42,867] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2024-04-11 00:19:42,929] [SpringApplicationShutdownHook] INFO  [fraud-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/FRAUD-SERVICES/host.docker.internal:fraud-services:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/FRAUD-SERVICES/host.docker.internal:fraud-services:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 39 more
+
+[2024-04-11 00:19:42,930] [SpringApplicationShutdownHook] WARN  [fraud-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/FRAUD-SERVICES/host.docker.internal:fraud-services:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-11 00:19:43,172] [SpringApplicationShutdownHook] INFO  [fraud-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/FRAUD-SERVICES/host.docker.internal:fraud-services:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/FRAUD-SERVICES/host.docker.internal:fraud-services:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 40 more
+
+[2024-04-11 00:19:43,173] [SpringApplicationShutdownHook] WARN  [fraud-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/FRAUD-SERVICES/host.docker.internal:fraud-services:8081": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-11 00:19:43,174] [SpringApplicationShutdownHook] ERROR [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+[2024-04-11 00:19:43,198] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2024-04-11 01:38:35,074] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - Starting FraudApplication using Java 17.0.10 with PID 21336 (C:\Users\Adrian\Documents\DEKRA\quickprod\fraud-services\target\classes started by Adrian in C:\Users\Adrian\Documents\DEKRA\quickprod)
+[2024-04-11 01:38:35,077] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - No active profile set, falling back to 1 default profile: "default"
+[2024-04-11 01:38:35,901] [main] INFO  [fraud-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-11 01:38:36,014] [main] INFO  [fraud-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+[2024-04-11 01:38:36,350] [main] INFO  [fraud-services,,] cloud.context.scope.GenericScope - BeanFactory id=f966d691-d4cb-3ab2-a457-5f58915b8df2
+[2024-04-11 01:38:36,640] [main] WARN  [fraud-services,,] elegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+[2024-04-11 01:38:36,643] [main] WARN  [fraud-services,,] elegate$BeanPostProcessorChecker - Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+[2024-04-11 01:38:36,931] [main] INFO  [fraud-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+[2024-04-11 01:38:36,943] [main] INFO  [fraud-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-11 01:38:36,943] [main] INFO  [fraud-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+[2024-04-11 01:38:37,001] [main] INFO  [fraud-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-11 01:38:37,001] [main] INFO  [fraud-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1885 ms
+[2024-04-11 01:38:37,591] [main] INFO  [fraud-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-11 01:38:37,681] [main] INFO  [fraud-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.4.1.Final
+[2024-04-11 01:38:37,722] [main] INFO  [fraud-services,,] o.h.c.i.RegionFactoryInitiator   - HHH000026: Second-level cache disabled
+[2024-04-11 01:38:37,959] [main] INFO  [fraud-services,,] .o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-04-11 01:38:37,989] [main] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-11 01:38:38,243] [main] INFO  [fraud-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3663af34
+[2024-04-11 01:38:38,245] [main] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-11 01:38:38,302] [main] WARN  [fraud-services,,] org.hibernate.orm.deprecation    - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-04-11 01:38:39,122] [main] INFO  [fraud-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-04-11 01:38:39,150] [main] WARN  [fraud-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-11 01:38:39,150] [main] WARN  [fraud-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_fraud_customer_check" does not exist, skipping
+[2024-04-11 01:38:39,254] [main] INFO  [fraud-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-11 01:38:39,550] [main] WARN  [fraud-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-11 01:38:40,333] [main] INFO  [fraud-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-11 01:38:40,378] [main] WARN  [fraud-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-11 01:38:40,411] [main] INFO  [fraud-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-11 01:38:40,491] [main] INFO  [fraud-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-11 01:38:40,524] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-11 01:38:40,528] [main] INFO  [fraud-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-11 01:38:40,551] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-11 01:38:40,551] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-11 01:38:40,551] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-11 01:38:40,551] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-11 01:38:40,551] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-11 01:38:40,551] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-11 01:38:40,551] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-11 01:38:40,744] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-11 01:38:40,746] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-11 01:38:40,748] [main] INFO  [fraud-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-11 01:38:40,751] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712792320750 with initial instances count: 3
+[2024-04-11 01:38:40,755] [main] INFO  [fraud-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application FRAUD-SERVICES with eureka with status UP
+[2024-04-11 01:38:40,756] [main] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712792320756, current=UP, previous=STARTING]
+[2024-04-11 01:38:40,757] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081: registering service...
+[2024-04-11 01:38:40,785] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - registration status: 204
+[2024-04-11 01:38:40,802] [main] INFO  [fraud-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path ''
+[2024-04-11 01:38:40,803] [main] INFO  [fraud-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8081
+[2024-04-11 01:38:40,879] [main] INFO  [fraud-services,,] d.a.d.q.fraud.FraudApplication   - Started FraudApplication in 6.335 seconds (process running for 6.886)
+[2024-04-11 01:38:41,299] [RMI TCP Connection(2)-192.168.1.135] INFO  [fraud-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-11 01:38:41,300] [RMI TCP Connection(2)-192.168.1.135] INFO  [fraud-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-11 01:38:41,302] [RMI TCP Connection(2)-192.168.1.135] INFO  [fraud-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-11 01:42:14,739] [http-nio-8081-exec-1] INFO  [fraud-services,661723d50bd8441368d1e899fcc978f2,1f52bf553be323ce] d.q.f.controller.FraudController - fraud check request for customer false
+[2024-04-11 01:42:18,461] [http-nio-8081-exec-4] INFO  [fraud-services,661723dac3eb9ae22ac1a688de9d502d,cc9053418e38da5e] d.q.f.controller.FraudController - fraud check request for customer true
+[2024-04-11 01:42:30,885] [SpringApplicationShutdownHook] INFO  [fraud-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application FRAUD-SERVICES with eureka with status DOWN
+[2024-04-11 01:42:30,885] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712792550885, current=DOWN, previous=UP]
+[2024-04-11 01:42:30,886] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081: registering service...
+[2024-04-11 01:42:30,906] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - registration status: 204
+[2024-04-11 01:42:30,972] [SpringApplicationShutdownHook] INFO  [fraud-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-11 01:42:31,051] [SpringApplicationShutdownHook] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-04-11 01:42:31,057] [SpringApplicationShutdownHook] INFO  [fraud-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-04-11 01:42:32,062] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2024-04-11 01:42:35,068] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2024-04-11 01:42:35,076] [SpringApplicationShutdownHook] INFO  [fraud-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
+	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1183)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1144)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1090)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+[2024-04-11 01:42:35,077] [SpringApplicationShutdownHook] WARN  [fraud-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: Connection pool shut down
+[2024-04-11 01:42:35,097] [SpringApplicationShutdownHook] INFO  [fraud-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=Connection pool shut down stacktrace=java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
+	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:298)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:125)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1183)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1144)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1090)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+
+[2024-04-11 01:42:35,097] [SpringApplicationShutdownHook] WARN  [fraud-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: Connection pool shut down
+[2024-04-11 01:42:35,098] [SpringApplicationShutdownHook] ERROR [fraud-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_FRAUD-SERVICES/host.docker.internal:fraud-services:8081 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1183)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1144)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1090)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+[2024-04-11 01:42:35,111] [SpringApplicationShutdownHook] INFO  [fraud-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

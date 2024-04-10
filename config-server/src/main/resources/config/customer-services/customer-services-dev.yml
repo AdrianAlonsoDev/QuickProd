@@ -19,8 +19,8 @@ spring:
     name: customer-services
   datasource:
     url: jdbc:postgresql://localhost:5432/customer
-    password: password
-    username: reancode
+    password: 123
+    username: dekra
   jpa:
     hibernate:
       ddl-auto: create-drop

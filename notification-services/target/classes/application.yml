@@ -16,9 +16,9 @@ spring:
   application:
     name: notification-services
   datasource:
-    password: password
+    password: 123
     url: jdbc:postgresql://localhost:5432/notification
-    username: reancode
+    username: dekra
   jpa:
     hibernate:
       ddl-auto: create-drop

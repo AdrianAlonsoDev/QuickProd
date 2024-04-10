@@ -3,11 +3,12 @@ services:
     container_name: postgres
     image: postgres
     environment:
-      POSTGRES_USER: reancode
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: dekra
+      POSTGRES_PASSWORD: 123
       PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
+      - ./init-db:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
     networks:
@@ -17,8 +18,8 @@ services:
     container_name: pgadmin
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-dekratestmockup@gmail.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-123}
       PGADMIN_CONFIG_SERVER_MODE: 'False'
     volumes:
       - pgadmin:/var/lib/pgadmin
