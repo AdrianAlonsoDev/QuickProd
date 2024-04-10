@@ -3,7 +3,9 @@ version: "3"
 services:
   keycloak:
     image: quay.io/keycloak/keycloak:20.0.0
-    command: start-dev
+    command:
+      - start-dev
+      - --import-realm
     environment:
       KC_DB: postgres
       KC_DB_URL_HOST: postgres
@@ -14,6 +16,8 @@ services:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
       KEYCLOAK_JDBC_PARAMS: 'sslmode=require'
+    volumes:
+      - ./realm-export/QP_KeycloackExport.json:/opt/keycloak/data/import/QP_KeycloackExport.json
     ports:
       - "9090:8080"
     depends_on:

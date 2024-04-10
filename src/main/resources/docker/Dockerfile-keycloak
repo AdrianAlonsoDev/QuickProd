@@ -1,2 +1,0 @@
-# Usar release image de Keycloak (Usando 23.0.7 rn)
-FROM quay.io/keycloak/keycloak:23.0.7
