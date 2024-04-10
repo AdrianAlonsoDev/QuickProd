@@ -7,7 +7,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication(
         scanBasePackages = {
                 "dev.adrianalonso.dekra.quickprod.customer",
-                "dev.adrianalonso.dekra.quickprod.rabbitmq"
         }
 )
 @EnableFeignClients(basePackages = "dev.adrianalonso.dekra.quickprod.clients")

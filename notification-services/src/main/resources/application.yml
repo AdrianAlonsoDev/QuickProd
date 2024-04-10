@@ -27,8 +27,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
-  rabbitmq:
-    addresses: localhost:5672
   kafka:
     bootstrap-servers: http://localhost:9092
     consumer:
@@ -60,14 +58,3 @@ management:
         http:
           server:
             requests: true
-
-# rabbitmq
-rabbitmq:
-  exchanges:
-    internal: internal.exchange # create a new topic exchange name
-  queues:
-    notification: notification.queue # create a new queue name
-  routing-keys:
-    internal-notification: internal.notification.routing-key # create a new name of exchange and queue (binding)
-
-

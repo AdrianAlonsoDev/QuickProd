@@ -13,10 +13,12 @@
         <module name="customer-services" />
         <module name="api-gateway" />
         <module name="eureka-server" />
-        <module name="rabbitmq" />
         <module name="fraud-services" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rabbitmq" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
