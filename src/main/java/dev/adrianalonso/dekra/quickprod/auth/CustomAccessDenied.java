@@ -1,7 +1,7 @@
 package dev.adrianalonso.dekra.quickprod.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.adrianalonso.dekra.quickprod.auth.tokenhandler.BaseResponseDTO;
+import dev.adrianalonso.dekra.quickprod.auth.dto.BaseResponseDTO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

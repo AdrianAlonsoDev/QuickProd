@@ -1,4 +1,4 @@
-package dev.adrianalonso.dekra.quickprod.configuration;
+package dev.adrianalonso.dekra.quickprod.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

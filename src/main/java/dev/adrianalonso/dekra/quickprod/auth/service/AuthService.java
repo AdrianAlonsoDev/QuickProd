@@ -1,8 +1,8 @@
-package dev.adrianalonso.dekra.quickprod.auth;
+package dev.adrianalonso.dekra.quickprod.auth.service;
 
-import dev.adrianalonso.dekra.quickprod.auth.tokenhandler.LoginRequestDTO;
-import dev.adrianalonso.dekra.quickprod.auth.tokenhandler.TokenDTO;
-import dev.adrianalonso.dekra.quickprod.auth.tokenhandler.BaseResponseDTO;
+import dev.adrianalonso.dekra.quickprod.auth.dto.LoginRequestDTO;
+import dev.adrianalonso.dekra.quickprod.auth.dto.TokenDTO;
+import dev.adrianalonso.dekra.quickprod.auth.dto.BaseResponseDTO;
 import dev.adrianalonso.dekra.quickprod.redis.SessionStorage;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

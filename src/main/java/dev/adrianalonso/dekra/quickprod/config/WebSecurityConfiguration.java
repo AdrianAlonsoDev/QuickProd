@@ -1,8 +1,8 @@
-package dev.adrianalonso.dekra.quickprod.configuration;
+package dev.adrianalonso.dekra.quickprod.config;
 
 import dev.adrianalonso.dekra.quickprod.auth.AuthenticationEntryPoint;
 import dev.adrianalonso.dekra.quickprod.auth.CustomAccessDenied;
-import dev.adrianalonso.dekra.quickprod.auth.JwtAuthConverter;
+import dev.adrianalonso.dekra.quickprod.auth.util.JwtAuthConverter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -28,46 +28,47 @@ public class WebSecurityConfiguration {
     @Value("${keycloak.issuer-url}")
     private String tokenIssuerUrl;
 
+    private static final String RUTA_ADMIN = "/home/admin/**";
+    private static final String RUTA_PUBLIC = "/home/public/**";
+    private static final String[] RUTAS_PERMITIDAS = {"/auth/**", "/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**"};
+
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http, AuthenticationEntryPoint entryPoint,
-                                                   CustomAccessDenied accessDenied) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        DelegatingJwtGrantedAuthoritiesConverter authoritiesConverter = new DelegatingJwtGrantedAuthoritiesConverter(
-                        new JwtGrantedAuthoritiesConverter(),
-                        new JwtAuthConverter(kcClientId));
+        DelegatingJwtGrantedAuthoritiesConverter propertiesDelegator = new DelegatingJwtGrantedAuthoritiesConverter(
+                new JwtGrantedAuthoritiesConverter(), new JwtAuthConverter(kcClientId));
 
-        http.authorizeHttpRequests(authorizeRequests ->
-                authorizeRequests
-                    .requestMatchers("/home/admin/**")
-                        .hasRole("ADMIN_WRITE")
-                    .requestMatchers("/home/public/**")
-                        .hasRole("USER_READ")
-                        .requestMatchers("/auth/**", "/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
-                        .requestMatchers("/auth/**").permitAll()
-                    .anyRequest().authenticated()
-            )
-            .httpBasic()
-            .and()
-            .exceptionHandling()
-                .authenticationEntryPoint(entryPoint)
-                .accessDeniedHandler(accessDenied)
-            .and()
-            .csrf().disable()
+        http
+                .authorizeHttpRequests(authorizeRequests ->
+                        authorizeRequests
+                                .requestMatchers(RUTA_ADMIN).hasRole("ADMIN_EDIT")
+                                .requestMatchers(RUTA_PUBLIC).hasRole("USER_READ")
+                                .requestMatchers(RUTAS_PERMITIDAS).permitAll()
+                                .anyRequest().authenticated()
+                )
+                .httpBasic()
+                .and()
+                .exceptionHandling()
+                .authenticationEntryPoint(new AuthenticationEntryPoint())
+                .accessDeniedHandler(new CustomAccessDenied())
+                .and()
+                .csrf().disable()
                 .oauth2ResourceServer()
                 .jwt()
                 .jwtAuthenticationConverter(
-                        jwt -> new JwtAuthenticationToken(jwt, authoritiesConverter.convert(jwt))
+                        jwt -> new JwtAuthenticationToken(jwt, propertiesDelegator.convert(jwt))
                 );
+
         return http.build();
     }
 
     @Bean
-    public JwtDecoder jwtDecoder() {
+    public JwtDecoder JwtDecoder() {
         return JwtDecoders.fromIssuerLocation(tokenIssuerUrl);
     }
 
     @Bean
-    GrantedAuthorityDefaults grantedAuthorityDefaults() {
+    GrantedAuthorityDefaults defaultAuthGranted() {
         return new GrantedAuthorityDefaults("");
     }
 }

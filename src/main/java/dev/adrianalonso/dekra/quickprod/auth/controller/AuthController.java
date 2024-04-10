@@ -1,6 +1,7 @@
-package dev.adrianalonso.dekra.quickprod.auth;
+package dev.adrianalonso.dekra.quickprod.auth.controller;
 
-import dev.adrianalonso.dekra.quickprod.auth.tokenhandler.LoginRequestDTO;
+import dev.adrianalonso.dekra.quickprod.auth.service.AuthService;
+import dev.adrianalonso.dekra.quickprod.auth.dto.LoginRequestDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,18 +1,14 @@
+# Configuración de AUTH-SERVICES
 server:
   port: 9095
-  servlet:
-    context-path: /dekra
-
 spring:
   application:
     name: quickprod
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://${keycloak.domain}/realms/${keycloak.realm}
   datasource:
-
+    url: "jdbc:postgresql://localhost:5436/keycloak_v1?ssl=false"
+    username: postgres
+    password: root
+#LOG
 logging:
   level:
     org:
@@ -20,16 +16,25 @@ logging:
         web: INFO
       hibernate: INFO
 
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://${keycloak.domain}/realms/${keycloak.realm}
+
+# Configuración de Keycloak
 keycloak:
-  client-id: auth-service-v1
-  client-secret: MLaTjNY5t4KzutqLWNCDoFm7b4pQaTJE
-  get-token-url: http://localhost:9090/realms/quickprod-realm/protocol/openid-connect/token
-  issuer-url: http://localhost:9090/realms/quickprod-realm
+  client-id: quickprodAuthentication #ID del cliente en Keycloak
+  client-secret: IbuPPUIgYJhHbBw6Dgqn7QPoiUseMbI2 # Ocultar con ${ENV} en prod.
+  #URL para obtener el token
+  get-token-url: http://localhost:9090/realms/QP_Keycloack/protocol/openid-connect/token
+  issuer-url: http://localhost:9090/realms/QP_Keycloack #URL del servidor de Keycloak
+
+# Configuración de Redis por defecto
 redis:
   config:
     cache:
       host: localhost
       port: 6379
-      password: redis-password
-
-
+      password: root

@@ -1,6 +1,7 @@
 package dev.adrianalonso.dekra.quickprod.redis;
 
 import io.lettuce.core.resource.ClientResources;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,23 +15,22 @@ import java.time.Duration;
 @Configuration
 public class RedisClientConnection {
 
-    @Value(value = "${redis.config.cache.host}")
-    private String host;
-    @Value(value = "${redis.config.cache.port}")
-    private int port;
-    @Value(value = "${redis.config.cache.password}")
-    private String password;
+    private RedisProperties redisProperties;
 
     @Bean
-    public LettuceConnectionFactory redisConnectionFactory() {
-        var redisStandaloneConfiguration = new RedisStandaloneConfiguration(host, port);
-        redisStandaloneConfiguration.setPassword(RedisPassword.of(password));
-        return new LettuceConnectionFactory(
-                redisStandaloneConfiguration,
-                LettuceClientConfiguration.builder()
-                        .commandTimeout(Duration.ofSeconds(30))
-                        .clientResources(ClientResources.builder().build())
-                        .build()
-        );
-    }
+    public LettuceConnectionFactory redisConnectionFactory(RedisProperties redisProperties) {
+
+        var config = new RedisStandaloneConfiguration(
+                                            redisProperties.getHost(),
+                                            redisProperties.getPort());
+        config.setPassword(RedisPassword.of(redisProperties.getPassword()));
+
+        LettuceClientConfiguration clientConfig = LettuceClientConfiguration.builder()
+                .commandTimeout(Duration.ofSeconds(30))  // Añadir timeout de 30 segundos
+                .build();
+
+        return new LettuceConnectionFactory(config, clientConfig);    }
 }
+
+
+

@@ -1,6 +1,5 @@
 package dev.adrianalonso.dekra.quickprod.exception;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
@@ -33,16 +32,16 @@ import static org.springframework.http.HttpStatus.*;
 
  *
  * Métodos principales:
- * - {@code exception}: Para excepciones generales.
- * - {@code apiException}: Para excepciones personalizadas.
- * - {@code handleExceptionInternal}: Para excepciones no especificadas por otros handlers.
- * - {@code handleMethodArgumentNotValid}: Para errores de validación de argumentos.
- * - {@code badCredentialsException}: Para excepciones de credenciales incorrectas.
- * - {@code accessDeniedException}: Para excepciones de acceso denegado.
- * - {@code emptyResultDataAccessException}: Para excepciones de datos no encontrados.
- * - {@code disabledException}: Para excepciones de cuenta deshabilitada.
- * - {@code lockedException}: Para excepciones de cuenta bloqueada.
- * - {@code dataAccessException}: Para excepciones de acceso a datos.
+ * - {@code exception}: Para Excepciones generales
+ * - {@code apiException}: Excepciones personalizadas
+ * - {@code handleExceptionInternal}: No especificadas por otros handlers.
+ * - {@code handleMethodArgumentNotValid}: Validación de argumentos.
+ * - {@code badCredentialsException}: Credenciales incorrectas.
+ * - {@code accessDeniedException}: Acceso denegado.
+ * - {@code emptyResultDataAccessException}: Datos no encontrados.
+ * - {@code disabledException}: Cuenta deshabilitada.
+ * - {@code lockedException}: Cuenta bloqueada.
+ * - {@code dataAccessException}: Acceso a datos.
  *
  *
  * La estructura de los handlers, marcados con {@code @ExceptionHandler}, solo capturarán
@@ -50,7 +49,7 @@ import static org.springframework.http.HttpStatus.*;
  *
  */
 @RestControllerAdvice
-public class HandleException extends ResponseEntityExceptionHandler implements ErrorController {
+public class ExceptionHandlerController extends ResponseEntityExceptionHandler implements ErrorController {
 
     /**
      * Maneja excepciones internas envolviéndolas en un {@link HttpResponse} estructurado.
@@ -77,11 +76,11 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Gestiona errores de argumentos no válidos en métodos de controlador.
-     * @param exception La excepción capturada.
-     * @param headers Los encabezados HTTP de la respuesta.
-     * @param statusCode El código de estado HTTP para la respuesta.
-     * @param request La solicitud web en curso.
-     * @return Una respuesta HTTP estructurada indicando el error específico.
+     * @param exception
+     * @param headers
+     * @param statusCode
+     * @param request
+     * @return HTTP Response
      */
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException exception, HttpHeaders headers, HttpStatusCode statusCode, WebRequest request) {
@@ -99,8 +98,8 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Maneja la excepción de credenciales incorrectas.
-     * @param exception La excepción de credenciales incorrectas.
-     * @return Respuesta detallada del error con motivo y mensaje para desarrolladores.
+     * @param exception
+     * @return
      */
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<HttpResponse> badCredentialsException(BadCredentialsException exception) {
@@ -116,8 +115,8 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Maneja excepciones generadas por la API.
-     * @param exception La excepción API capturada.
-     * @return Respuesta con detalles del error.
+     * @param exception
+     * @return
      */
     @ExceptionHandler(ApiException.class)
     public ResponseEntity<HttpResponse> apiException(ApiException exception) {
@@ -133,8 +132,8 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Maneja el acceso denegado.
-     * @param exception La excepción de acceso denegado.
-     * @return Respuesta con el error de acceso denegado.
+     * @param exception
+     * @return
      */
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<HttpResponse> accessDeniedException(AccessDeniedException exception) {
@@ -150,8 +149,8 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Maneja excepciones generales no capturadas específicamente por otros manejadores.
-     * @param exception La excepción general capturada.
-     * @return Respuesta con los detalles del error encontrado.
+     * @param exception
+     * @return
      */
     @ExceptionHandler(Exception.class)
     public ResponseEntity<HttpResponse> exception(Exception exception) {
@@ -170,8 +169,8 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Maneja las excepciones de resultados vacíos en consultas de base de datos.
-     * @param exception La excepción de resultado vacío capturada.
-     * @return Respuesta indicando que no se encontraron registros.
+     * @param exception
+     * @return
      */
     @ExceptionHandler(EmptyResultDataAccessException.class)
     public ResponseEntity<HttpResponse> emptyResultDataAccessException(EmptyResultDataAccessException exception) {
@@ -187,8 +186,8 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Maneja excepciones cuando la cuenta de usuario está deshabilitada.
-     * @param exception La excepción de cuenta deshabilitada.
-     * @return Respuesta indicando que la cuenta del usuario está deshabilitada.
+     * @param exception
+     * @return
      */
     @ExceptionHandler(DisabledException.class)
     public ResponseEntity<HttpResponse> disabledException(DisabledException exception) {
@@ -204,8 +203,8 @@ public class HandleException extends ResponseEntityExceptionHandler implements E
 
     /**
      * Maneja excepciones cuando la cuenta de usuario está bloqueada.
-     * @param exception La excepción de cuenta bloqueada.
-     * @return Respuesta indicando que la cuenta del usuario está bloqueada.
+     * @param exception
+     * @return
      */
     @ExceptionHandler(LockedException.class)
     public ResponseEntity<HttpResponse> lockedException(LockedException exception) {

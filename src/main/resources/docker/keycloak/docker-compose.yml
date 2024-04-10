@@ -1,58 +1,56 @@
-version: '3.6'
+version: "3"
 
 services:
-  postgres_db:
-    container_name: keycloak_db
-    build:
-      context: .
-      dockerfile: ../Dockerfile-postgres
-    restart: always
+  keycloak:
+    image: quay.io/keycloak/keycloak:20.0.0
+    command: start-dev
     environment:
-      POSTGRES_DB: keycloak
-      POSTGRES_USER: kcadmin
-      POSTGRES_PASSWORD: password
-    ports:
-      - "5432:5432"
-    networks:
-      - keycloak-and-postgres-network
-    volumes:
-      - postgres_db_data:/var/lib/postgresql/data
-
-  keycloak_web:
-    container_name: keycloak_web
-    build:
-      context: .
-      dockerfile: ../Dockerfile-keycloak
-    command:
-      - start-dev
-      - --import-realm
-    depends_on:
-      - postgres_db
-    ports:
-      - "8080:8080"
-    restart: always
-    volumes:
-      - ./realm-export/realm-export.json:/opt/keycloak/data/import/realm-export.json
-    networks:
-      - keycloak-and-postgres-network
-    environment:
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin@123
       KC_DB: postgres
-      KC_DB_USERNAME: kcadmin
-      KC_DB_PASSWORD: password
-      KC_DB_URL: jdbc:postgresql://postgres_db:5432/keycloak
+      KC_DB_URL_HOST: postgres
+      KC_DB_URL_DATABASE: keycloak_v1
+      KC_DB_PASSWORD: root
+      KC_DB_USERNAME: postgres
       KC_DB_SCHEMA: public
-      KC_HOSTNAME: localhost
-      KC_HOSTNAME_PORT: 8080
-      KC_HOSTNAME_STRICT: false
-      KC_HOSTNAME_STRICT_HTTPS: false
-      KC_LOG_LEVEL: info
-      KC_METRICS_ENABLED: true
-      KC_HEALTH_ENABLED: true
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KEYCLOAK_JDBC_PARAMS: 'sslmode=require'
+    ports:
+      - "9090:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      network_sso:
 
-networks:
-  keycloak-and-postgres-network:
+  postgres:
+    image: postgres:10
+    command: ["postgres", "-c", "max_connections=200", "-c", "shared_buffers=24MB", "-c", "listen_addresses=*"]
+    environment:
+      POSTGRES_DB: keycloak_v1
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    healthcheck:
+      test: "exit 0"
+    ports:
+      - "5436:5432"
+    networks:
+      network_sso:
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    user: postgres
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    environment:
+      REDIS_PASSWORD: "root"
+    volumes:
+      - redis_data:/data
 
 volumes:
-  postgres_db_data:
+  postgres_data:
+  redis_data:
+
+networks:
+  network_sso:
