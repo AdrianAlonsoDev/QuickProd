@@ -4,8 +4,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "fraud-service")
+@FeignClient("fraud-services")
 public interface FraudClient {
-    @PostMapping(path = "api/v1//fraud-checks")
-    FraudCheckResponse checkingCustomerInfo(@RequestBody FraudRequest fraudRequest);
+    @PostMapping(path = "api/v1/fraud-checks")
+    FraudCheckResponse checkCustomer(@RequestBody FraudRequest fraudRequest);
 }

@@ -1,0 +1,1545 @@
+[2024-04-10 07:41:49,221] [main] INFO  [customer-services,,] ean.customer.CustomerApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-04-10 07:41:50,410] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-10 07:41:50,552] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 133 ms. Found 1 JPA repository interfaces.
+[2024-04-10 07:41:50,864] [main] INFO  [customer-services,,] cloud.context.scope.GenericScope - BeanFactory id=d745ce40-1b6b-3a77-8115-2b63ed532a9f
+[2024-04-10 07:41:50,923] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'fraud.dev.adrianalonso.dekra.quickprod.clients.FraudClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 07:41:50,924] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'notification.dev.adrianalonso.dekra.quickprod.clients.NotificationClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 07:41:51,219] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-04-10 07:41:51,228] [main] INFO  [customer-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-10 07:41:51,228] [main] INFO  [customer-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2024-04-10 07:41:51,301] [main] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-10 07:41:51,302] [main] INFO  [customer-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2065 ms
+[2024-04-10 07:41:51,867] [main] INFO  [customer-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-10 07:41:51,932] [main] INFO  [customer-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2024-04-10 07:41:52,262] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-10 07:41:52,489] [main] INFO  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@aaa7000
+[2024-04-10 07:41:52,490] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-10 07:41:52,582] [main] INFO  [customer-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2024-04-10 07:41:53,360] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-10 07:41:53,361] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_customer" does not exist, skipping
+[2024-04-10 07:41:53,511] [main] INFO  [customer-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2024-04-10 07:41:53,520] [main] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 07:41:53,864] [main] WARN  [customer-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-10 07:41:53,912] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'fraud-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 07:41:53,969] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'notification-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 07:41:54,819] [main] INFO  [customer-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-10 07:41:54,840] [main] WARN  [customer-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-10 07:41:54,850] [main] INFO  [customer-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-10 07:41:54,890] [main] WARN  [customer-services,,] ableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+[2024-04-10 07:41:54,938] [main] INFO  [customer-services,,] o.a.k.c.admin.AdminClientConfig  - AdminClientConfig values: 
+	bootstrap.servers = [http://localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[2024-04-10 07:41:55,013] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2024-04-10 07:41:55,013] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2024-04-10 07:41:55,013] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712727715011
+[2024-04-10 07:41:56,840] [main] INFO  [customer-services,,] o.s.kafka.core.KafkaAdmin        - Topic 'notification' exists but has a different partition count: 1 not 10, increasing if the broker supports it
+[2024-04-10 07:41:59,397] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+[2024-04-10 07:41:59,401] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+[2024-04-10 07:41:59,401] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2024-04-10 07:41:59,401] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+[2024-04-10 07:41:59,412] [main] INFO  [customer-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-10 07:41:59,441] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-10 07:41:59,444] [main] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-10 07:41:59,461] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-10 07:41:59,462] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-10 07:41:59,462] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-10 07:41:59,462] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-10 07:41:59,462] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-10 07:41:59,462] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-10 07:41:59,462] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-10 07:41:59,614] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-10 07:41:59,616] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-10 07:41:59,619] [main] INFO  [customer-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-10 07:41:59,623] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712727719622 with initial instances count: 1
+[2024-04-10 07:41:59,625] [main] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application CUSTOMER-SERVICES with eureka with status UP
+[2024-04-10 07:41:59,626] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712727719625, current=UP, previous=STARTING]
+[2024-04-10 07:41:59,627] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 07:41:59,650] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-04-10 07:41:59,651] [main] INFO  [customer-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8080
+[2024-04-10 07:41:59,658] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 07:41:59,726] [main] INFO  [customer-services,,] ean.customer.CustomerApplication - Started CustomerApplication in 11.527 seconds (process running for 12.079)
+[2024-04-10 07:41:59,927] [RMI TCP Connection(4)-192.168.1.135] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-10 07:41:59,928] [RMI TCP Connection(4)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-10 07:41:59,928] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+[2024-04-10 07:41:59,929] [RMI TCP Connection(4)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-10 07:42:00,101] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#77e2a5d3:0/SimpleConnection@4629312 [delegate=amqp://guest@127.0.0.1:5672/, localPort=54541]
+[2024-04-10 07:42:32,323] [SpringApplicationShutdownHook] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application CUSTOMER-SERVICES with eureka with status DOWN
+[2024-04-10 07:42:32,323] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712727752323, current=DOWN, previous=UP]
+[2024-04-10 07:42:32,323] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 07:42:32,341] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 07:42:32,377] [SpringApplicationShutdownHook] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 07:42:32,378] [SpringApplicationShutdownHook] INFO  [customer-services,,] ropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2024-04-10 07:42:32,485] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-04-10 07:42:32,488] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-04-10 07:42:33,500] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2024-04-10 07:42:36,506] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2024-04-10 07:42:36,529] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - deregister  status: 200
+[2024-04-10 07:42:36,539] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2024-04-10 07:44:42,763] [main] INFO  [customer-services,,] ean.customer.CustomerApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-04-10 07:44:44,136] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-10 07:44:44,255] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interfaces.
+[2024-04-10 07:44:44,502] [main] INFO  [customer-services,,] cloud.context.scope.GenericScope - BeanFactory id=18141109-dd01-34c8-9216-73f691b08c28
+[2024-04-10 07:44:44,565] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'fraud.dev.adrianalonso.dekra.quickprod.clients.FraudClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 07:44:44,566] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'notification.dev.adrianalonso.dekra.quickprod.clients.NotificationClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 07:44:44,854] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-04-10 07:44:44,872] [main] INFO  [customer-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-10 07:44:44,872] [main] INFO  [customer-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2024-04-10 07:44:44,947] [main] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-10 07:44:44,947] [main] INFO  [customer-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2171 ms
+[2024-04-10 07:44:45,563] [main] INFO  [customer-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-10 07:44:45,658] [main] INFO  [customer-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2024-04-10 07:44:46,157] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-10 07:44:46,352] [main] INFO  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a68cbc5
+[2024-04-10 07:44:46,353] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-10 07:44:46,451] [main] INFO  [customer-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2024-04-10 07:44:47,140] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-10 07:44:47,140] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_customer" does not exist, skipping
+[2024-04-10 07:44:47,287] [main] INFO  [customer-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2024-04-10 07:44:47,299] [main] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 07:44:47,751] [main] WARN  [customer-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-10 07:44:47,806] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'fraud-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 07:44:47,853] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'notification-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 07:44:48,762] [main] INFO  [customer-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-10 07:44:48,794] [main] WARN  [customer-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-10 07:44:48,807] [main] INFO  [customer-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-10 07:44:48,850] [main] WARN  [customer-services,,] ableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+[2024-04-10 07:44:48,903] [main] INFO  [customer-services,,] o.a.k.c.admin.AdminClientConfig  - AdminClientConfig values: 
+	bootstrap.servers = [http://localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[2024-04-10 07:44:48,985] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2024-04-10 07:44:48,986] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2024-04-10 07:44:48,986] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712727888983
+[2024-04-10 07:44:49,741] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+[2024-04-10 07:44:49,745] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+[2024-04-10 07:44:49,746] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2024-04-10 07:44:49,746] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+[2024-04-10 07:44:49,757] [main] INFO  [customer-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-10 07:44:49,795] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-10 07:44:49,800] [main] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-10 07:44:49,826] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-10 07:44:49,827] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-10 07:44:49,827] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-10 07:44:49,827] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-10 07:44:49,827] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-10 07:44:49,827] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-10 07:44:49,827] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-10 07:44:49,981] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-10 07:44:49,984] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-10 07:44:49,987] [main] INFO  [customer-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-10 07:44:49,991] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712727889991 with initial instances count: 3
+[2024-04-10 07:44:49,993] [main] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application CUSTOMER-SERVICES with eureka with status UP
+[2024-04-10 07:44:49,994] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712727889994, current=UP, previous=STARTING]
+[2024-04-10 07:44:49,996] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 07:44:50,010] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-04-10 07:44:50,011] [main] INFO  [customer-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8080
+[2024-04-10 07:44:50,044] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 07:44:50,093] [main] INFO  [customer-services,,] ean.customer.CustomerApplication - Started CustomerApplication in 8.304 seconds (process running for 9.008)
+[2024-04-10 07:44:50,365] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-10 07:44:50,366] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-10 07:44:50,366] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+[2024-04-10 07:44:50,367] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-10 07:44:50,539] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#35e64c7b:0/SimpleConnection@1f9bfcaf [delegate=amqp://guest@127.0.0.1:5672/, localPort=54762]
+[2024-04-10 07:45:08,402] [http-nio-8080-exec-3] INFO  [customer-services,661627644af0568d078a97d146c0807f,078a97d146c0807f] o.s.api.AbstractOpenApiResource  - Init duration for springdoc-openapi is: 116 ms
+[2024-04-10 07:45:20,786] [http-nio-8080-exec-4] INFO  [customer-services,661627708ff6e5e52155d51dbd437474,2155d51dbd437474] .c.controller.CustomerController - Intercept request register customer CustomerRegistrationRequest[firstName=string, lastName=string, email=string, idType=string, idValue=string, phoneNumber=string, gender=string]
+[2024-04-10 07:45:22,612] [http-nio-8080-exec-4] INFO  [customer-services,661627708ff6e5e52155d51dbd437474,2155d51dbd437474] o.a.k.c.producer.ProducerConfig  - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [http://localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+[2024-04-10 07:45:22,628] [http-nio-8080-exec-4] INFO  [customer-services,661627708ff6e5e52155d51dbd437474,2155d51dbd437474] k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2024-04-10 07:45:22,646] [http-nio-8080-exec-4] INFO  [customer-services,661627708ff6e5e52155d51dbd437474,2155d51dbd437474] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2024-04-10 07:45:22,646] [http-nio-8080-exec-4] INFO  [customer-services,661627708ff6e5e52155d51dbd437474,2155d51dbd437474] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2024-04-10 07:45:22,646] [http-nio-8080-exec-4] INFO  [customer-services,661627708ff6e5e52155d51dbd437474,2155d51dbd437474] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712727922646
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-0 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-5 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-2 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-8 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-9 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-1 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-4 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-6 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-7 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,660] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-3 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 07:45:22,661] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: hKpIUJnEQ-yUSeIBV10MlQ
+[2024-04-10 07:45:22,684] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] o.a.k.c.p.i.TransactionManager   - [Producer clientId=producer-1] ProducerId set to 4 with epoch 0
+[2024-04-10 07:49:50,021] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-10 07:54:22,795] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] ache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+[2024-04-10 07:54:50,194] [AsyncResolver-bootstrap-executor-0] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-10 07:59:30,662] [SpringApplicationShutdownHook] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application CUSTOMER-SERVICES with eureka with status DOWN
+[2024-04-10 07:59:30,664] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712728770664, current=DOWN, previous=UP]
+[2024-04-10 07:59:30,666] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 07:59:30,736] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 07:59:32,543] [SpringApplicationShutdownHook] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 07:59:32,570] [SpringApplicationShutdownHook] INFO  [customer-services,,] ropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2024-04-10 07:59:33,050] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-04-10 07:59:33,085] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-04-10 07:59:33,327] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2024-04-10 07:59:36,346] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2024-04-10 07:59:36,420] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 39 more
+
+[2024-04-10 07:59:36,421] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-10 07:59:36,485] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 40 more
+
+[2024-04-10 07:59:36,486] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-10 07:59:36,486] [SpringApplicationShutdownHook] ERROR [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+[2024-04-10 07:59:36,524] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2024-04-10 08:09:12,069] [main] INFO  [customer-services,,] d.q.customer.CustomerApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-04-10 08:09:12,973] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-10 08:09:13,226] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 243 ms. Found 1 JPA repository interfaces.
+[2024-04-10 08:09:13,458] [main] INFO  [customer-services,,] cloud.context.scope.GenericScope - BeanFactory id=a89cb92c-3d7d-3b83-9fd6-18502155d06d
+[2024-04-10 08:09:13,802] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-04-10 08:09:13,811] [main] INFO  [customer-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-10 08:09:13,811] [main] INFO  [customer-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2024-04-10 08:09:13,891] [main] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-10 08:09:13,891] [main] INFO  [customer-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1809 ms
+[2024-04-10 08:09:14,391] [main] INFO  [customer-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-10 08:09:14,459] [main] INFO  [customer-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2024-04-10 08:09:14,743] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-10 08:09:14,947] [main] INFO  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7491cdae
+[2024-04-10 08:09:14,948] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-10 08:09:15,044] [main] INFO  [customer-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2024-04-10 08:09:15,790] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-10 08:09:15,790] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_customer" does not exist, skipping
+[2024-04-10 08:09:15,924] [main] INFO  [customer-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2024-04-10 08:09:15,934] [main] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 08:09:16,088] [main] WARN  [customer-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-10 08:09:17,423] [main] INFO  [customer-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-10 08:09:17,456] [main] WARN  [customer-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-10 08:09:17,476] [main] INFO  [customer-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-10 08:09:17,513] [main] WARN  [customer-services,,] ableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+[2024-04-10 08:09:17,565] [main] INFO  [customer-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-10 08:09:17,597] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-10 08:09:17,600] [main] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-10 08:09:17,619] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-10 08:09:17,619] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-10 08:09:17,619] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-10 08:09:17,619] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-10 08:09:17,620] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-10 08:09:17,620] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-10 08:09:17,620] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-10 08:09:17,774] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-10 08:09:17,775] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-10 08:09:17,777] [main] INFO  [customer-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-10 08:09:17,780] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712729357780 with initial instances count: 0
+[2024-04-10 08:09:17,782] [main] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application CUSTOMER-SERVICES with eureka with status UP
+[2024-04-10 08:09:17,782] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712729357782, current=UP, previous=STARTING]
+[2024-04-10 08:09:17,783] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 08:09:17,802] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-04-10 08:09:17,803] [main] INFO  [customer-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8080
+[2024-04-10 08:09:17,813] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 08:09:17,878] [main] INFO  [customer-services,,] d.q.customer.CustomerApplication - Started CustomerApplication in 6.736 seconds (process running for 7.312)
+[2024-04-10 08:09:18,261] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-10 08:09:18,262] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-10 08:09:18,262] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+[2024-04-10 08:09:18,263] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[2024-04-10 08:09:18,438] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3446ab40:0/SimpleConnection@62643fdf [delegate=amqp://guest@127.0.0.1:5672/, localPort=55507]
+[2024-04-10 08:09:47,776] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-10 08:09:47,777] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-10 08:09:47,777] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-10 08:09:47,777] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-10 08:09:47,777] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-10 08:09:47,777] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: false
+[2024-04-10 08:09:47,777] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-10 08:09:47,804] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-10 08:09:52,871] [SpringApplicationShutdownHook] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application CUSTOMER-SERVICES with eureka with status DOWN
+[2024-04-10 08:09:52,871] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712729392871, current=DOWN, previous=UP]
+[2024-04-10 08:09:52,872] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 08:09:52,886] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 08:09:52,909] [SpringApplicationShutdownHook] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 08:09:52,910] [SpringApplicationShutdownHook] INFO  [customer-services,,] ropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2024-04-10 08:09:52,992] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-04-10 08:09:52,996] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-04-10 08:09:54,004] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2024-04-10 08:09:57,019] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2024-04-10 08:09:57,031] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 39 more
+
+[2024-04-10 08:09:57,032] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-10 08:09:57,039] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 40 more
+
+[2024-04-10 08:09:57,040] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-10 08:09:57,040] [SpringApplicationShutdownHook] ERROR [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+[2024-04-10 08:09:57,052] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2024-04-10 08:10:54,235] [main] INFO  [customer-services,,] d.q.customer.CustomerApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-04-10 08:10:55,261] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-10 08:10:55,445] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 174 ms. Found 1 JPA repository interfaces.
+[2024-04-10 08:10:55,825] [main] INFO  [customer-services,,] cloud.context.scope.GenericScope - BeanFactory id=7206a899-60f5-3a7a-835e-f33ef6114cc1
+[2024-04-10 08:10:55,939] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'dev.adrianalonso.dekra.quickprod.clients.fraud.FraudClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 08:10:55,940] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'dev.adrianalonso.dekra.quickprod.clients.notification.NotificationClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 08:10:56,280] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-04-10 08:10:56,289] [main] INFO  [customer-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-10 08:10:56,289] [main] INFO  [customer-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2024-04-10 08:10:56,372] [main] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-10 08:10:56,372] [main] INFO  [customer-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2124 ms
+[2024-04-10 08:10:56,937] [main] INFO  [customer-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-10 08:10:57,013] [main] INFO  [customer-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2024-04-10 08:10:57,380] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-10 08:10:57,550] [main] INFO  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@37196d53
+[2024-04-10 08:10:57,552] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-10 08:10:57,586] [main] INFO  [customer-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2024-04-10 08:10:58,678] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-10 08:10:58,679] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_customer" does not exist, skipping
+[2024-04-10 08:10:58,750] [main] INFO  [customer-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2024-04-10 08:10:58,761] [main] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 08:10:59,410] [main] WARN  [customer-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-10 08:10:59,486] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'fraud-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 08:10:59,553] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'notification-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 08:11:01,064] [main] INFO  [customer-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-10 08:11:01,104] [main] WARN  [customer-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-10 08:11:01,129] [main] INFO  [customer-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-10 08:11:01,195] [main] WARN  [customer-services,,] ableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+[2024-04-10 08:11:01,283] [main] INFO  [customer-services,,] o.a.k.c.admin.AdminClientConfig  - AdminClientConfig values: 
+	bootstrap.servers = [http://localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[2024-04-10 08:11:01,391] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2024-04-10 08:11:01,391] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2024-04-10 08:11:01,392] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712729461389
+[2024-04-10 08:11:02,288] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+[2024-04-10 08:11:02,292] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+[2024-04-10 08:11:02,292] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2024-04-10 08:11:02,292] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+[2024-04-10 08:11:02,306] [main] INFO  [customer-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-10 08:11:02,353] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-10 08:11:02,359] [main] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-10 08:11:02,386] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-10 08:11:02,386] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-10 08:11:02,386] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-10 08:11:02,386] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-10 08:11:02,386] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-10 08:11:02,386] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-10 08:11:02,386] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-10 08:11:02,585] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-10 08:11:02,587] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-10 08:11:02,589] [main] INFO  [customer-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-10 08:11:02,593] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712729462592 with initial instances count: 1
+[2024-04-10 08:11:02,595] [main] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application CUSTOMER-SERVICES with eureka with status UP
+[2024-04-10 08:11:02,595] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712729462595, current=UP, previous=STARTING]
+[2024-04-10 08:11:02,597] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 08:11:02,610] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-04-10 08:11:02,612] [main] INFO  [customer-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8080
+[2024-04-10 08:11:02,634] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 08:11:02,770] [main] INFO  [customer-services,,] d.q.customer.CustomerApplication - Started CustomerApplication in 9.495 seconds (process running for 10.001)
+[2024-04-10 08:11:03,036] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-10 08:11:03,036] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-10 08:11:03,037] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+[2024-04-10 08:11:03,038] [RMI TCP Connection(2)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[2024-04-10 08:11:03,338] [RMI TCP Connection(3)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6c5e6da:0/SimpleConnection@41503fcc [delegate=amqp://guest@127.0.0.1:5672/, localPort=55682]
+[2024-04-10 08:11:14,605] [http-nio-8080-exec-3] INFO  [customer-services,66162d821a237e571d3e5380704f9146,1d3e5380704f9146] o.s.api.AbstractOpenApiResource  - Init duration for springdoc-openapi is: 132 ms
+[2024-04-10 08:12:40,365] [http-nio-8080-exec-10] INFO  [customer-services,66162dd83272f27922bd199b7bf36736,22bd199b7bf36736] d.a.d.q.c.c.CustomerController   - Intercept request register customer CustomerRegistrationRequest[firstName=string, lastName=string, email=string, idType=string, idValue=string, phoneNumber=string, gender=string]
+[2024-04-10 08:12:40,977] [http-nio-8080-exec-10] INFO  [customer-services,66162dd83272f27922bd199b7bf36736,22bd199b7bf36736] o.a.k.c.producer.ProducerConfig  - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [http://localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+[2024-04-10 08:12:40,989] [http-nio-8080-exec-10] INFO  [customer-services,66162dd83272f27922bd199b7bf36736,22bd199b7bf36736] k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2024-04-10 08:12:41,007] [http-nio-8080-exec-10] INFO  [customer-services,66162dd83272f27922bd199b7bf36736,22bd199b7bf36736] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2024-04-10 08:12:41,007] [http-nio-8080-exec-10] INFO  [customer-services,66162dd83272f27922bd199b7bf36736,22bd199b7bf36736] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2024-04-10 08:12:41,007] [http-nio-8080-exec-10] INFO  [customer-services,66162dd83272f27922bd199b7bf36736,22bd199b7bf36736] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712729561007
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-0 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-5 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-2 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-8 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-9 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-1 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-4 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-6 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-7 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-3 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:12:41,033] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: hKpIUJnEQ-yUSeIBV10MlQ
+[2024-04-10 08:12:41,043] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] o.a.k.c.p.i.TransactionManager   - [Producer clientId=producer-1] ProducerId set to 5 with epoch 0
+[2024-04-10 08:14:23,357] [SpringApplicationShutdownHook] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Unregistering application CUSTOMER-SERVICES with eureka with status DOWN
+[2024-04-10 08:14:23,357] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712729663357, current=DOWN, previous=UP]
+[2024-04-10 08:14:23,357] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 08:14:23,378] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 08:14:23,458] [SpringApplicationShutdownHook] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 08:14:23,465] [SpringApplicationShutdownHook] INFO  [customer-services,,] ropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[2024-04-10 08:14:23,511] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2024-04-10 08:14:23,520] [SpringApplicationShutdownHook] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2024-04-10 08:14:23,994] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+[2024-04-10 08:14:27,010] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Unregistering ...
+[2024-04-10 08:14:27,054] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 39 more
+
+[2024-04-10 08:14:27,055] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-10 08:14:27,116] [SpringApplicationShutdownHook] INFO  [customer-services,,] .t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:888)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:868)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:764)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:646)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:190)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:54)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:93)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:862)
+	... 40 more
+
+[2024-04-10 08:14:27,117] [SpringApplicationShutdownHook] WARN  [customer-services,,] .s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/CUSTOMER-SERVICES/host.docker.internal:customer-services:8080": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[2024-04-10 08:14:27,117] [SpringApplicationShutdownHook] ERROR [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916) ~[eureka-client-2.0.0.jar:2.0.0]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892) ~[eureka-client-2.0.0.jar:2.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:425) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:383) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:213) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:191) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:184) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.0.1.jar:4.0.1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1189) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1182) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1084) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1053) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:173) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1003) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:139) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:108) ~[spring-boot-3.0.5.jar:3.0.5]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+[2024-04-10 08:14:27,127] [SpringApplicationShutdownHook] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+[2024-04-10 08:18:39,920] [main] INFO  [customer-services,,] d.q.customer.CustomerApplication - No active profile set, falling back to 1 default profile: "default"
+[2024-04-10 08:18:41,227] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-10 08:18:41,402] [main] INFO  [customer-services,,] .RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 166 ms. Found 1 JPA repository interfaces.
+[2024-04-10 08:18:41,824] [main] INFO  [customer-services,,] cloud.context.scope.GenericScope - BeanFactory id=7206a899-60f5-3a7a-835e-f33ef6114cc1
+[2024-04-10 08:18:41,935] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'dev.adrianalonso.dekra.quickprod.clients.fraud.FraudClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 08:18:41,936] [main] INFO  [customer-services,,] elegate$BeanPostProcessorChecker - Bean 'dev.adrianalonso.dekra.quickprod.clients.notification.NotificationClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2024-04-10 08:18:42,541] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[2024-04-10 08:18:42,558] [main] INFO  [customer-services,,] .a.catalina.core.StandardService - Starting service [Tomcat]
+[2024-04-10 08:18:42,558] [main] INFO  [customer-services,,] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+[2024-04-10 08:18:42,669] [main] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2024-04-10 08:18:42,670] [main] INFO  [customer-services,,] rvletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2728 ms
+[2024-04-10 08:18:43,739] [main] INFO  [customer-services,,] o.h.jpa.internal.util.LogHelper  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-10 08:18:43,830] [main] INFO  [customer-services,,] org.hibernate.Version            - HHH000412: Hibernate ORM core version 6.1.7.Final
+[2024-04-10 08:18:44,268] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2024-04-10 08:18:44,635] [main] INFO  [customer-services,,] om.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66779435
+[2024-04-10 08:18:44,636] [main] INFO  [customer-services,,] m.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2024-04-10 08:18:44,750] [main] INFO  [customer-services,,] SQL dialect                      - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2024-04-10 08:18:46,355] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+[2024-04-10 08:18:46,356] [main] WARN  [customer-services,,] .h.e.jdbc.spi.SqlExceptionHelper - table "tbl_customer" does not exist, skipping
+[2024-04-10 08:18:46,528] [main] INFO  [customer-services,,] h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2024-04-10 08:18:46,541] [main] INFO  [customer-services,,] ontainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-10 08:18:47,230] [main] WARN  [customer-services,,] onfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-10 08:18:47,330] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'fraud-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 08:18:47,410] [main] INFO  [customer-services,,] o.s.c.o.FeignClientFactoryBean   - For 'notification-services' URL not provided. Will try picking an instance via load-balancing.
+[2024-04-10 08:18:49,370] [main] INFO  [customer-services,,] yClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[2024-04-10 08:18:49,411] [main] WARN  [customer-services,,] n$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[2024-04-10 08:18:49,426] [main] INFO  [customer-services,,] .b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-04-10 08:18:49,501] [main] WARN  [customer-services,,] ableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+[2024-04-10 08:18:49,582] [main] INFO  [customer-services,,] o.a.k.c.admin.AdminClientConfig  - AdminClientConfig values: 
+	bootstrap.servers = [http://localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+[2024-04-10 08:18:49,768] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2024-04-10 08:18:49,768] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2024-04-10 08:18:49,768] [main] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712729929765
+[2024-04-10 08:18:50,916] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+[2024-04-10 08:18:50,921] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+[2024-04-10 08:18:50,921] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[2024-04-10 08:18:50,921] [kafka-admin-client-thread | adminclient-1] INFO  [customer-services,,] o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+[2024-04-10 08:18:50,935] [main] INFO  [customer-services,,] s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+[2024-04-10 08:18:50,976] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+[2024-04-10 08:18:50,980] [main] INFO  [customer-services,,] .d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[2024-04-10 08:18:51,002] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-10 08:18:51,002] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-10 08:18:51,003] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-10 08:18:51,003] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-10 08:18:51,003] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-10 08:18:51,003] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: true
+[2024-04-10 08:18:51,003] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-10 08:18:51,240] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-10 08:18:51,245] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[2024-04-10 08:18:51,247] [main] INFO  [customer-services,,] discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2024-04-10 08:18:51,256] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1712729931255 with initial instances count: 0
+[2024-04-10 08:18:51,261] [main] INFO  [customer-services,,] .s.c.n.e.s.EurekaServiceRegistry - Registering application CUSTOMER-SERVICES with eureka with status UP
+[2024-04-10 08:18:51,261] [main] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1712729931261, current=UP, previous=STARTING]
+[2024-04-10 08:18:51,263] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080: registering service...
+[2024-04-10 08:18:51,278] [main] INFO  [customer-services,,] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[2024-04-10 08:18:51,279] [main] INFO  [customer-services,,] .s.EurekaAutoServiceRegistration - Updating port to 8080
+[2024-04-10 08:18:51,300] [DiscoveryClient-InstanceInfoReplicator-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - DiscoveryClient_CUSTOMER-SERVICES/host.docker.internal:customer-services:8080 - registration status: 204
+[2024-04-10 08:18:51,375] [main] INFO  [customer-services,,] d.q.customer.CustomerApplication - Started CustomerApplication in 12.691 seconds (process running for 13.426)
+[2024-04-10 08:18:51,478] [RMI TCP Connection(4)-192.168.1.135] INFO  [customer-services,,] a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-04-10 08:18:51,478] [RMI TCP Connection(5)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+[2024-04-10 08:18:51,478] [RMI TCP Connection(4)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2024-04-10 08:18:51,480] [RMI TCP Connection(4)-192.168.1.135] INFO  [customer-services,,] .s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[2024-04-10 08:18:51,695] [RMI TCP Connection(5)-192.168.1.135] INFO  [customer-services,,] s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6c5e6da:0/SimpleConnection@3b53889d [delegate=amqp://guest@127.0.0.1:5672/, localPort=56238]
+[2024-04-10 08:19:14,358] [http-nio-8080-exec-7] INFO  [customer-services,66162f622512d22e45ec55cbcf7a4ec1,45ec55cbcf7a4ec1] o.s.api.AbstractOpenApiResource  - Init duration for springdoc-openapi is: 129 ms
+[2024-04-10 08:19:21,248] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Disable delta property : false
+[2024-04-10 08:19:21,248] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+[2024-04-10 08:19:21,249] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Force full registry fetch : false
+[2024-04-10 08:19:21,249] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application is null : false
+[2024-04-10 08:19:21,249] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+[2024-04-10 08:19:21,250] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Application version is -1: false
+[2024-04-10 08:19:21,250] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+[2024-04-10 08:19:21,277] [DiscoveryClient-CacheRefreshExecutor-0] INFO  [customer-services,,] etflix.discovery.DiscoveryClient - The response status is 200
+[2024-04-10 08:19:26,021] [http-nio-8080-exec-9] INFO  [customer-services,66162f6eff53c7462d5e403fcc354dc9,2d5e403fcc354dc9] d.a.d.q.c.c.CustomerController   - Intercept request register customer CustomerRegistrationRequest[firstName=string, lastName=string, email=string, idType=string, idValue=string, phoneNumber=string, gender=string]
+[2024-04-10 08:19:26,612] [http-nio-8080-exec-9] INFO  [customer-services,66162f6eff53c7462d5e403fcc354dc9,2d5e403fcc354dc9] o.a.k.c.producer.ProducerConfig  - ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [http://localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+[2024-04-10 08:19:26,626] [http-nio-8080-exec-9] INFO  [customer-services,66162f6eff53c7462d5e403fcc354dc9,2d5e403fcc354dc9] k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+[2024-04-10 08:19:26,644] [http-nio-8080-exec-9] INFO  [customer-services,66162f6eff53c7462d5e403fcc354dc9,2d5e403fcc354dc9] kafka.common.utils.AppInfoParser - Kafka version: 3.3.2
+[2024-04-10 08:19:26,644] [http-nio-8080-exec-9] INFO  [customer-services,66162f6eff53c7462d5e403fcc354dc9,2d5e403fcc354dc9] kafka.common.utils.AppInfoParser - Kafka commitId: b66af662e61082cb
+[2024-04-10 08:19:26,644] [http-nio-8080-exec-9] INFO  [customer-services,66162f6eff53c7462d5e403fcc354dc9,2d5e403fcc354dc9] kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712729966644
+[2024-04-10 08:19:26,657] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-0 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-5 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-2 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-8 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-9 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-1 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-4 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-6 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-7 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Resetting the last seen epoch of partition notification-3 to 0 since the associated topicId changed from null to 1N0b2bADT4KStn7T0Ko58Q
+[2024-04-10 08:19:26,658] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] rg.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: hKpIUJnEQ-yUSeIBV10MlQ
+[2024-04-10 08:19:26,667] [kafka-producer-network-thread | producer-1] INFO  [customer-services,,] o.a.k.c.p.i.TransactionManager   - [Producer clientId=producer-1] ProducerId set to 6 with epoch 0

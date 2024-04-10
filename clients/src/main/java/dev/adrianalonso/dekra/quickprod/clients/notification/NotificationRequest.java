@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class NotificationRequest {
+public class NotificationRequest{
 
     @JsonProperty("to_customer_id")
     Integer toCustomerId;
@@ -18,3 +18,5 @@ public class NotificationRequest {
     String toCustomerName;
     String message;
 }
+
+
