@@ -1,17 +1,6 @@
 server:
   port: 8082
 
-logging:
-  file:
-    path: './logs/${spring.application.name}'
-    name: ${logging.file.path}.log
-  pattern:
-    # level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
-    console: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
-    file: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
-  logback:
-    rolling policy:
-      max-file-size: 20MB
 spring:
   application:
     name: notification-services
@@ -31,6 +20,7 @@ spring:
     bootstrap-servers: http://localhost:9092
     consumer:
       group-id: notification-id
+
 # Eureka Server
 eureka:
   client:
@@ -58,3 +48,15 @@ management:
         http:
           server:
             requests: true
+
+logging:
+  file:
+    path: './logs/${spring.application.name}'
+    name: ${logging.file.path}.log
+  pattern:
+    # level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+    console: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+    file: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+  logback:
+    rolling policy:
+      max-file-size: 20MB

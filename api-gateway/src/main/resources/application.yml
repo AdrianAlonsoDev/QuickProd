@@ -1,11 +1,6 @@
 server:
   port: 8083
 
-# Take the span id and trace id from the Mapped Diagnostic Context (MDC) and
-# put them into the log message.
-logging:
-  pattern:
-    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 spring:
   application:
     name: api-gateway
@@ -20,6 +15,11 @@ spring:
           uri: lb://FRAUD-SERVICES
           predicates:
             - Path=/api/v1/fraud-checks/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
   profiles:
     active: default
 
@@ -49,3 +49,13 @@ management:
         http:
           server:
             requests: true
+
+# Take the span id and trace id from the Mapped Diagnostic Context (MDC) and
+# put them into the log message.
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.netflix.eureka: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"

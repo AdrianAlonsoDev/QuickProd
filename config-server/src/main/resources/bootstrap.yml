@@ -1,5 +1,2 @@
 encrypt:
   key: '*'
-spring:
-  application:
-    name: cloud-config-server

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>dev.adrianalonso.dekra.quickprod</groupId>
-        <artifactId>rean-microservices</artifactId>
+        <artifactId>quickprod-microservices</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -44,7 +44,7 @@
        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-            <version>4.0.0</version>
+            <version>4.1.0</version>
         </dependency>
 
         <dependency>
@@ -78,16 +78,15 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-            <version>4.0.2</version>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>4.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
-            <version>4.0.2</version>
+            <version>4.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springdoc</groupId>

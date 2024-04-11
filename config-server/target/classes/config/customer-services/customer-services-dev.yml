@@ -1,25 +1,23 @@
 server:
   #port: ${PORT:0}
   port: 8080
-
 # Take the span id and trace id from the Mapped Diagnostic Context (MDC) and
 # put them into the log message.
 logging:
   file:
-    max-siz: 20MB
     path: './logs/${spring.application.name}'
     name: ${logging.file.path}.log
   pattern:
-    console: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
-    file: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+    console: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+    file: "[%d] [%t] %-5level [${spring.application.name:},%X{traceId:-},%X{spanId:-}] %-32.32logger{36} - %msg%n"
+  logback:
+    rolling policy:
+      max-file-size: 20MB
 spring:
-  application:
-    name: customer-services
   datasource:
     url: jdbc:postgresql://localhost:5432/customer
-    password: password
-    username: reancode
-    driver-class-name: org.hibernate.dialect.PostgreSQLDialect
+    password: 123
+    username: dekra
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -28,8 +26,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
     show-sql: true
-  rabbitmq:
-    addresses: localhost:5672
   kafka:
     bootstrap-servers: http://localhost:9092
     consumer:
@@ -62,12 +58,3 @@ management:
         http:
           server:
             requests: true
-
-# rabbitmq
-rabbitmq:
-  exchanges:
-    internal: internal.exchange # create a new topic exchange
-  queues:
-    notification: notification.queue # create a new queue name
-  routing-keys:
-    internal-notification: internal.notification.routing-key # create a new name of exchange and queue (binding)

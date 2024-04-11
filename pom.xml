@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.adrianalonso.dekra.quickprod</groupId>
-	<artifactId>rean-microservices</artifactId>
+	<artifactId>quickprod-microservices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>rean-microservices</name>
+	<name>quickprod-microservices</name>
 	<description>Spring Boot Microservices</description>
 
 	<modules>

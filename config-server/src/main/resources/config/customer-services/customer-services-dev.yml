@@ -1,7 +1,6 @@
 server:
   #port: ${PORT:0}
   port: 8080
-
 # Take the span id and trace id from the Mapped Diagnostic Context (MDC) and
 # put them into the log message.
 logging:
@@ -15,8 +14,6 @@ logging:
     rolling policy:
       max-file-size: 20MB
 spring:
-  application:
-    name: customer-services
   datasource:
     url: jdbc:postgresql://localhost:5432/customer
     password: 123
@@ -61,4 +58,3 @@ management:
         http:
           server:
             requests: true
-
