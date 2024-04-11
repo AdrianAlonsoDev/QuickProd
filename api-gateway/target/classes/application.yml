@@ -4,25 +4,19 @@ server:
 spring:
   application:
     name: api-gateway
-  cloud:
-    gateway:
-      routes:
-        - id: customer-services
-          uri: lb://CUSTOMER-SERVICES
-          predicates:
-            - Path=/api/v1/customers/**
-        - id: fraud-services
-          uri: lb://FRAUD-SERVICES
-          predicates:
-            - Path=/api/v1/fraud-checks/**
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
 
   profiles:
     active: default
 
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    configUrl: localhost:8083/v3/api-docs/swagger-config
+    url: localhost:8083/v3/api-docs
+    urls:
+      - name: customer-services
+        url: localhost:8080/v3/api-docs
 eureka:
   client:
     service-url:
