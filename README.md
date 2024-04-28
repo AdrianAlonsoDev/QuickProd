@@ -1,9 +1,16 @@
 # QUICKPROD 🚀
+!! (Version v2 OUT: https://github.com/AdrianAlonsoDev/QuickProd-v2)
+
 QuickProd es un framework que permite maximizar la eficiencia
 en la gestión de productos en diferentes contextos.
 
-(Desarrollado para la prueba técnica de DEKRA)
+## Information 🛠️
+Repositorio de páctica hecho público para mostrar las diferentes lineas de aprendizaje para terminar desarrollando la versión [QP-v2](https://github.com/AdrianAlonsoDev/QuickProd-v2)
 
+El proyecto se divide en 3 branches. 
+* main
+* [discovery](https://github.com/AdrianAlonsoDev/QuickProd/tree/discovery) 
+* [refactor-keycloak-redis](https://github.com/AdrianAlonsoDev/QuickProd/tree/refactor-keycloak-redis/)
 ## Installation 🛠️
 - Instalar Docker y Docker Compose.
 
